@@ -167,15 +167,14 @@ footer{
 .sitio-footer {
     margin-top: 40px;
     padding-bottom: 20px;
-    text-align: center; /* Centra todo el contenido */
+    text-align: center; 
 }
 
 
 
-/* Los enlaces de redes sociales */
-/* Contenedor del footer para asegurar el centrado */
+
 .sitio-footer {
-    margin-top: 50px; /* Espacio respecto a los botones */
+    margin-top: 50px; 
     padding-bottom: 20px;
     width: 100%;
     text-align: center;
@@ -183,7 +182,7 @@ footer{
 
 .separador {
     border: 0;
-    border-top: 1px solid #eee; /* Línea muy suave */
+    border-top: 1px solid #eee; 
     margin-bottom: 25px;
 }
 
@@ -191,8 +190,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Espacio entre links */
-    flex-wrap: wrap; /* Evita que se amontonen en pantallas chicas */
+    gap: 15px; 
+    flex-wrap: wrap; 
 }
 
 .links-redes a {
