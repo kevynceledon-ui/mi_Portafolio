@@ -6,7 +6,7 @@ Portfolio personal developer Fullstack JavaScript.
 
 - **Nombre:** Kevin Celedón Martínez
 - **Perfil:** Junior Fullstack Developer
-- **Ubicación:** Colombia
+- **Ubicación:** Chile
 - **Email:** kevynceledon@gmail.com
 - **GitHub:** https://github.com/kevynceledon-ui
 - **LinkedIn:** https://www.linkedin.com/in/kevin-celed%C3%B3n/
