@@ -32,4 +32,39 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => {
     observer.observe(section);
   });
+
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formStatus = document.getElementById('formStatus');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+
+    try {
+      const res = await fetch('https://formspree.io/f/mredlloa', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        formStatus.textContent = '¡Mensaje enviado con éxito! Gracias por contactarme.';
+        formStatus.className = 'form-status success';
+        form.reset();
+      } else {
+        formStatus.textContent = 'Error al enviar. Intenta de nuevo más tarde.';
+        formStatus.className = 'form-status error';
+      }
+    } catch {
+      formStatus.textContent = 'Error de conexión. Verifica tu internet e intenta de nuevo.';
+      formStatus.className = 'form-status error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar mensaje';
+    }
+  });
 });
