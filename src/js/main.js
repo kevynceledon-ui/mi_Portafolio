@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navItems.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${current}`));
   }, { passive: true });
 
-  // Scramble para enumerados 01 — Sobre mí etc. (heinsoe) - loop mientras visible
+  // Scramble para enumerados 01 — Sobre mí etc. (heinsoe) - 1 disparo + hover
   const scrambleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789—';
   function scrambleText(el, toText){
     if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = toText; return; }
@@ -84,31 +84,30 @@ document.addEventListener('DOMContentLoaded', () => {
       let out = '';
       for (let i=0;i<len;i++){
         if (frame > (i * 1.1)) out += toText[i];
-        else if (i < toText.length) out += scrambleChars[Math.floor(Math.random()*scrambleChars.length)];
+        else out += scrambleChars[Math.floor(Math.random()*scrambleChars.length)];
       }
       el.textContent = out;
       frame++;
       if (frame > totalFrames) { el.textContent = toText; clearInterval(interval); el._scrambling = false; }
     }, 28);
   }
-  const scrambleTimers = new Map();
   const scrambleObserver = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
-      const el = entry.target;
-      const target = el.getAttribute('data-text') || el.textContent;
       if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = el.getAttribute('data-text') || el.textContent;
         scrambleText(el, target);
-        if (!scrambleTimers.has(el)) {
-          const id = setInterval(()=> scrambleText(el, target), 2800);
-          scrambleTimers.set(el, id);
-        }
-      } else {
-        const id = scrambleTimers.get(el);
-        if (id) { clearInterval(id); scrambleTimers.delete(el); }
+        scrambleObserver.unobserve(el);
       }
     });
   }, { threshold: 0.5 });
-  document.querySelectorAll('.scramble-label').forEach(el=> scrambleObserver.observe(el));
+  document.querySelectorAll('.scramble-label').forEach(el=> {
+    scrambleObserver.observe(el);
+    el.addEventListener('mouseenter', ()=> {
+      const t = el.getAttribute('data-text') || el.textContent;
+      scrambleText(el, t);
+    });
+  });
 
   // Copiar email ofuscado (privacidad A)
   function setupCopy(btnId, hintId){
