@@ -121,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const original = btn.textContent;
       try {
         await navigator.clipboard.writeText(email);
-        btn.textContent = '¡Copiado! ✓';
+        btn.textContent = 'email copiado';
         const hint = hintId ? document.getElementById(hintId) : null;
         if (hint) hint.textContent = email;
-        setTimeout(() => { btn.textContent = original; }, 2500);
+        setTimeout(() => { btn.textContent = original; }, 2200);
       } catch {
         btn.textContent = email;
         const hint = hintId ? document.getElementById(hintId) : null;
