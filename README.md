@@ -1,45 +1,55 @@
-# Kevin Celedón Martínez — Fullstack Developer
+# Kevin Celedón Martínez — Full Stack Developer
 
-Portfolio personal. JavaScript fullstack developer enfocado en backend con Node.js, APIs RESTful y bases de datos.
+Portfolio dark heinsoe-inspired. Backend y APIs robustas con disciplina operativa.
+
+**Live:** `https://kevynceledon-ui.github.io/mi_Portafolio/`
 
 ## Sobre mí
 
-Desarrollador fullstack especializado en backend con JavaScript. Experiencia construyendo APIs RESTful con Express, modelado de bases de datos con Sequelize (PostgreSQL, MySQL), y automatización con herramientas como Playwright y GitHub Actions.
+Desarrollador Full Stack egresado **Talento Digital para Chile**. Trayectoria no tradicional: conductor de patrulla → Operador CCTV ISAM → disciplina inquebrantable y resolución bajo presión llevadas al software. JS (Node.js, React, SQL) + **Google AI Essentials** + **Python / AWS / Azure en formación**.
 
-Actualmente buscando mi primera oportunidad en tech.
+## Stack (con iconos oficiales)
 
-## Tech Stack
+| Categoría | Tecnologías |
+|-----------|-------------|
+| Languages | JavaScript, Python *En formación* |
+| Backend | Node.js, Express, JWT, Swagger |
+| Database | PostgreSQL, MySQL, Sequelize, SQL |
+| Frontend | React, Vite, HTML5, CSS3 |
+| Tools & Cloud | Git, GitHub Actions, Playwright, AWS *En formación*, Azure *En formación*, Google AI Essentials |
 
-| Categoría   | Tecnologías                                      |
-|-------------|--------------------------------------------------|
-| Languages   | JavaScript (ES6+)                                |
-| Backend     | Node.js, Express                                 |
-| Database    | PostgreSQL, MySQL, Sequelize                     |
-| Frontend    | React, Vite, HTML5, CSS3                         |
-| Tools       | Git, Playwright, GitHub Actions, ESLint          |
+> ESLint removido — no usado en proyecto actual para mantener honestidad.
 
 ## Proyectos
 
-### Esports Teams Management API
-API RESTful para crear y gestionar equipos de esports. CRUD completo, autenticación JWT, documentación Swagger, upload de imágenes con Multer.
-
-**Stack:** Node.js, Express, Sequelize, PostgreSQL, JWT, Swagger, Multer
-
-[Repo](https://github.com/kevynceledon-ui/Proyecto-ABP-8-JWT-API-RESTful)
-
 ### FerreTraker
-Monitoreo y comparación de precios de materiales de construcción. Web scraping automatizado con Playwright ejecutado diariamente vía GitHub Actions, datos almacenados en PostgreSQL (Supabase), visualización en React.
-
-**Stack:** React, Node.js, Express, Sequelize, PostgreSQL, Playwright, GitHub Actions
+Plataforma Full Stack (Sodimac/Easy/Imperial). Scraping Playwright + GitHub Actions 04:00 AM + PostgreSQL Upsert.
 
 [Demo](https://ferre-traker.vercel.app) · [Repo](https://github.com/kevynceledon-ui/FerreTraker)
 
-## Contacto
+### Esports Teams Management API
+API RESTful CRUD con JWT/Swagger/Multer.
 
-- **Email:** kevynceledon@gmail.com
+[Repo](https://github.com/kevynceledon-ui/Proyecto-ABP-8-JWT-API-RESTful)
+
+## Experiencia
+
+- **Feb–Jul 2026** Operador de Sistemas y Control (CCTV) — ISAM, Vallenar
+
+## Formación
+
+- **2026 En curso** Automatización con Python — Coursera
+- **2026 En curso** Análisis de Datos — Coursera
+- **2026** Google AI Essentials — Google
+- **Dic 2025–Mar 2026** Bootcamp Full Stack JS — Talento Digital para Chile
+
+## Contacto (privacidad A)
+
+Sin teléfono/email en claro en HTML. Usa formulario (Formspree) + botón *Copiar email* (ofuscado via `data-user`/`data-domain` + clipboard) o LinkedIn/GitHub.
+
 - **GitHub:** [kevynceledon-ui](https://github.com/kevynceledon-ui)
 - **LinkedIn:** [Kevin Celedón](https://www.linkedin.com/in/kevin-celedón/)
+- **Ubicación:** Vallenar, Atacama — Disponible inmediato
 
 ---
-
-MIT License — Kevin Celedón 2026
+Diseño dark `#000000` con gradiente animado azul-verde-blanco en hero, iconos devicon, secciones separadas y tipografía Inter en experience (heinsoe).

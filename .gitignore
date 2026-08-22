@@ -1,1 +1,8 @@
-README.md
+# OS
+.DS_Store
+Thumbs.db
+
+# Deps / build
+node_modules/
+dist/
+.env

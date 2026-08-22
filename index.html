@@ -3,248 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Celedón |  Fullstack Developer</title>
+    <title>Kevin Celedón — Full Stack Developer | Node.js • React • SQL</title>
+    <meta name="description" content="Desarrollador Full Stack Talento Digital para Chile. Backend Node.js, APIs robustas, PostgreSQL y automatización. Google AI Essentials. Vallenar, Chile.">
+    <meta name="author" content="Kevin Celedón Martínez">
+    <meta property="og:title" content="Kevin Celedón — Full Stack Developer">
+    <meta property="og:description" content="Backend y APIs robustas. Talento Digital para Chile. Node.js, React, PostgreSQL, Playwright.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230a0a0f'/><text x='16' y='21' text-anchor='middle' font-family='monospace' font-size='13' font-weight='700' fill='%237c5cff'>KC</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="logo">Kevin</a>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <header class="header" id="header">
+        <nav class="nav" aria-label="Principal">
+            <a href="#" class="logo" aria-label="Inicio">KC.</a>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#aporte">Cómo aporto</a></li>
                 <li><a href="#stack">Stack</a></li>
                 <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#education">Formación</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
+            <a href="#contact" class="btn btn-pill btn-pill--lime header-cta">Hablemos →</a>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <section class="hero">
-            <div class="container">
-                <p class="hero-greeting">Hola, soy Kevin Celedón</p>
-                <h1 class="hero-title">Fullstack Developer</h1>
-                <p class="hero-tagline">Building robust APIs & elegant solutions with JavaScript</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-                    <div class="hero-social">
-                        <a href="https://github.com/kevynceledon-ui" target="_blank" rel="noopener" aria-label="GitHub">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/kevin-celed%C3%B3n/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
+            <div class="container hero-grid">
+                <div class="hero-main">
+                    <p class="hero-eyebrow">Talento Digital para Chile — Vallenar, Atacama · <span class="status-dot"></span> Disponible inmediato</p>
+                    <h1 class="hero-title">
+                        <span class="hero-name gradient-text">KEVIN CELEDÓN</span>
+                        <span class="hero-role gradient-text">Full Stack Developer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Construyo <strong>APIs y sistemas backend que no fallan bajo presión</strong>. Egresado Talento Digital para Chile, combino JavaScript (Node.js, React, SQL) con ética forjada en operaciones de alta responsabilidad.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-pill btn-pill--lime">Ver proyectos</a>
+                        <button type="button" class="btn btn-pill btn-pill--ghost" id="copyEmailBtn" data-user="kevynceledon" data-domain="gmail.com">Copiar email</button>
                     </div>
-                </div>
+                    <div class="hero-meta">
+                        <span class="meta-tag"><i class="devicon-google-plain"></i> Google AI Essentials ✓</span>
+                        <span class="meta-tag meta-tag--learning"><i class="devicon-python-plain"></i> Python · En formación</span>
+                        <span class="meta-tag meta-tag--learning"><i class="devicon-amazonwebservices-plain-wordmark"></i> AWS · En formación</span>
+                        <span class="meta-tag meta-tag--learning"><i class="devicon-azure-plain"></i> Azure · En formación</span>
+                    </div>
             </div>
         </section>
 
-        <section id="about" class="section about">
-            <div class="container">
-                <h2 class="section-title">Sobre mí</h2>
-                <div class="about-content">
-                    <p>Soy un desarrollador fullstack especializado en el desarrollo backend con JavaScript. Me enfoco en crear APIs RESTful robustas, diseñar esquemas de bases de datos eficientes y implementar soluciones escalables.</p>
-                    <p>Mi pasión está en el ecosistema Node.js, trabajé con Express para construir servicios web, Sequelize como ORM para gestionar PostgreSQL y MySQL, y siempre busco seguir las mejores prácticas de desarrollo.</p>
-                    <p>Actualmente estoy buscando mi primera oportunidad laboral en tech para aplicar mis conocimientos, crecer profesionalmente y contribuir en proyectos desafiantes.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="stack" class="section stack">
-            <div class="container">
-                <h2 class="section-title">Tech Stack</h2>
-                <div class="stack-grid">
-                    <div class="stack-category">
-                        <h3>Languages</h3>
-                        <div class="stack-items">
-                            <span class="badge">
-                                <svg class="tech-icon js" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="2" fill="#F7DF1E"/><text x="12" y="17" text-anchor="middle" font-size="12" font-weight="700" fill="#000">JS</text></svg>
-                                JavaScript
-                            </span>
-                        </div>
-                    </div>
-                    <div class="stack-category">
-                        <h3>Backend</h3>
-                        <div class="stack-items">
-                            <span class="badge">
-                                <svg class="tech-icon node" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 22,8 22,16 12,22 2,16 2,8" fill="none" stroke="#339933" stroke-width="2"/><text x="12" y="16" text-anchor="middle" font-size="8" font-weight="700" fill="#339933">N</text></svg>
-                                Node.js
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon express" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/><text x="12" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">E</text></svg>
-                                Express
-                            </span>
-                        </div>
-                    </div>
-                    <div class="stack-category">
-                        <h3>Database</h3>
-                        <div class="stack-items">
-                            <span class="badge">
-                                <svg class="tech-icon postgres" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="12" rx="9" ry="7" fill="none" stroke="#336791" stroke-width="1.5"/><ellipse cx="12" cy="9" rx="6" ry="4" fill="none" stroke="#336791" stroke-width="1.5"/><text x="12" y="15" text-anchor="middle" font-size="7" font-weight="700" fill="#336791">PG</text></svg>
-                                PostgreSQL
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon mysql" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4c-1.5 2-3 3-4.5 4 .5 1.5 1.5 2.5 3 3 -1 1-1.5 2-1.5 3.5 0 1 1 1.5 2 1.5 1.5 0 3-1.5 4-3.5 1-1.5 1.5-2.5 1-4 -1-1.5-2-2.5-4-4.5z" fill="#00758F"/><text x="12" y="13" text-anchor="middle" font-size="5" font-weight="700" fill="#fff">M</text></svg>
-                                MySQL
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon sequelize" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9" fill="none" stroke="#039BEF" stroke-width="1.5"/><text x="12" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#039BEF">S</text></svg>
-                                Sequelize
-                            </span>
-                        </div>
-                    </div>
-                    <div class="stack-category">
-                        <h3>Frontend</h3>
-                        <div class="stack-items">
-                            <span class="badge">
-                                <svg class="tech-icon html" viewBox="0 0 24 24" fill="currentColor"><path d="M3 0h18l-2 22-14 2-2-22z" fill="#E34F26"/><text x="11" y="16" text-anchor="middle" font-size="8" font-weight="700" fill="#fff">5</text></svg>
-                                HTML5
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon css" viewBox="0 0 24 24" fill="currentColor"><path d="M4 0h16l-2 22-12 2-2-22z" fill="#1572B6"/><text x="11" y="16" text-anchor="middle" font-size="8" font-weight="700" fill="#fff">3</text></svg>
-                                CSS3
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon react" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="2.5" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(0 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(120 12 12)"/></svg>
-                                React
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon vite" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 22,20 2,20" fill="none" stroke="#646CFF" stroke-width="1.5"/><text x="12" y="17" text-anchor="middle" font-size="9" font-weight="700" fill="#646CFF">V</text></svg>
-                                Vite
-                            </span>
-                        </div>
-                    </div>
-                    <div class="stack-category">
-                        <h3>Tools</h3>
-                        <div class="stack-items">
-                            <span class="badge">
-                                <svg class="tech-icon git" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="6" r="3" fill="none" stroke="#F05032" stroke-width="1.5"/><circle cx="18" cy="6" r="3" fill="none" stroke="#F05032" stroke-width="1.5"/><circle cx="12" cy="18" r="3" fill="none" stroke="#F05032" stroke-width="1.5"/><line x1="8" y1="7.5" x2="16" y2="7.5" stroke="#F05032" stroke-width="1.5"/><line x1="9" y1="9" x2="12" y2="15" stroke="#F05032" stroke-width="1.5"/><line x1="15" y1="9" x2="12" y2="15" stroke="#F05032" stroke-width="1.5"/></svg>
-                                Git
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon playwright" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9" fill="none" stroke="#45ba4b" stroke-width="1.5"/><polygon points="10,7 10,17 17,12" fill="#45ba4b"/></svg>
-                                Playwright
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon gh-actions" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9" fill="none" stroke="#fff" stroke-width="1.5"/><text x="12" y="15" text-anchor="middle" font-size="7" font-weight="700" fill="#fff">GA</text></svg>
-                                GitHub Actions
-                            </span>
-                            <span class="badge">
-                                <svg class="tech-icon eslint" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 22,8 22,16 12,22 2,16 2,8" fill="none" stroke="#4B32C3" stroke-width="1.5"/><text x="12" y="16" text-anchor="middle" font-size="7" font-weight="700" fill="#4B32C3">EL</text></svg>
-                                ESLint
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section projects">
-            <div class="container">
-                <h2 class="section-title">Proyectos</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Esports Teams Management API</h3>
-                            <div class="project-links">
-                                <a href="https://github.com/kevynceledon-ui/Proyecto-ABP-8-JWT-API-RESTful" target="_blank" rel="noopener">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                    <span>Repo</span>
-                                </a>
+        <section id="about" class="section section--editorial">
+            <div class="container editorial">
+                <div class="editorial-label"><span class="scramble-label" data-text="01 — Sobre mí">01 — Sobre mí</span><div class="label-line"></div></div>
+                <div class="editorial-content">
+                    <h2 class="editorial-claim">Mi trayectoria no es la tradicional. <span>Y esa es mi ventaja.</span></h2>
+                    <div class="about-grid">
+                        <div class="about-highlights">
+                            <ul class="highlight-list">
+                                <li><strong>Talento Digital para Chile</strong> — Bootcamp Full Stack JS Dic 2025–Mar 2026</li>
+                                <li><strong>Google AI Essentials</strong> — 2026</li>
+                                <li><strong>Resolución bajo presión</strong> — continuidad operativa 24/7</li>
+                            </ul>
+                            <div class="about-contact-mini">
+                                <a href="https://www.linkedin.com/in/kevin-celedón/" target="_blank" rel="noopener">LinkedIn</a>
+                                <span>·</span>
+                                <a href="https://github.com/kevynceledon-ui" target="_blank" rel="noopener">GitHub</a>
+                                <span>·</span>
+                                <a href="#contact">Formulario</a>
                             </div>
                         </div>
-                        <p class="project-description">API RESTful para crear y gestionar equipos de esports. Implementa autenticación JWT, documentación Swagger y upload de imágenes.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Node.js</span>
-                            <span class="tech-badge">Express</span>
-                            <span class="tech-badge">Sequelize</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">JWT</span>
-                            <span class="tech-badge">Swagger</span>
-                            <span class="tech-badge">Multer</span>
+                        <div class="about-text">
+                            <p>Desarrollador Full Stack egresado del programa <strong>Talento Digital para Chile</strong>, enfocado en construir soluciones backend y APIs robustas.</p>
+                            <p>Mi trayectoria no es la tradicional: mi experiencia previa en roles operativos y de alta responsabilidad, como <strong>conductor de patrulla y auxiliar</strong>, forjó en mí una <strong>disciplina inquebrantable</strong>, capacidad para resolver problemas bajo presión y una fuerte ética de trabajo.</p>
+                            <p>Hoy aplico esa misma rigurosidad al desarrollo de software y estoy en constante evolución. Además de mi dominio en el ecosistema JavaScript (<strong>Node.js, React, bases de datos relacionales</strong>), poseo la credencial de <strong>Google AI Essentials</strong> y actualmente estoy ampliando mi stack estudiando <strong>automatización con Python y arquitectura Cloud (AWS y Azure)</strong>.</p>
+                            <p class="about-closing"><em>Busco integrarme a un equipo donde pueda aportar valor desde el primer día mientras sigo escalando mis habilidades técnicas.</em></p>
                         </div>
-                    </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <article class="project-card">
-                        <div class="project-header">
+        <section id="aporte" class="section section--editorial section--alt">
+            <div class="container editorial">
+                <div class="editorial-label"><span class="scramble-label" data-text="02 — Cómo aporto">02 — Cómo aporto</span><div class="label-line"></div></div>
+                <div class="editorial-content">
+                    <h2 class="section-title">Lo que llevo a tu equipo.</h2>
+                    <div class="aporte-grid aporte-grid--3">
+                        <article class="aporte-card">
+                            <span class="aporte-num">01</span>
+                            <h3>APIs y Backend robusto</h3>
+                            <p>RESTful con Express, JWT, Swagger y validación pensada para producción. Documentado y testeado.</p>
+                        </article>
+                        <article class="aporte-card">
+                            <span class="aporte-num">02</span>
+                            <h3>Datos y Automatización</h3>
+                            <p>SQL, PostgreSQL/MySQL + Sequelize + Upsert. Scraping diario Playwright + GitHub Actions 04:00 AM.</p>
+                        </article>
+                        <article class="aporte-card">
+                            <span class="aporte-num">03</span>
+                            <h3>Continuidad operativa</h3>
+                            <p>Monitoreo 24/7, bitácoras, troubleshooting red/hardware, protocolos. Experiencia ISAM bajo presión.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stack" class="section section--editorial">
+            <div class="container editorial">
+                <div class="editorial-label"><span class="scramble-label" data-text="03 — Stack">03 — Stack</span><div class="label-line"></div></div>
+                <div class="editorial-content">
+                    <h2 class="section-title">Las herramientas correctas para cada problema.</h2>
+                    <div class="stack-grid">
+                        <div class="stack-category">
+                            <h3>Languages</h3>
+                            <div class="stack-items">
+                                <span class="badge"><i class="devicon-javascript-plain colored"></i> JavaScript (ES6+)</span>
+                                <span class="badge badge--learning"><i class="devicon-python-plain colored"></i> Python <em>En formación</em></span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h3>Backend</h3>
+                            <div class="stack-items">
+                                <span class="badge"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                                <span class="badge"><i class="devicon-express-original"></i> Express</span>
+                                <span class="badge">JWT</span>
+                                <span class="badge">Swagger</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h3>Database</h3>
+                            <div class="stack-items">
+                                <span class="badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                                <span class="badge"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                                <span class="badge"><i class="devicon-sequelize-plain colored"></i> Sequelize</span>
+                                <span class="badge"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h3>Frontend</h3>
+                            <div class="stack-items">
+                                <span class="badge"><i class="devicon-react-original colored"></i> React</span>
+                                <span class="badge"><i class="devicon-vitejs-plain colored"></i> Vite</span>
+                                <span class="badge"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                                <span class="badge"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h3>Tools & Cloud</h3>
+                            <div class="stack-items">
+                                <span class="badge"><i class="devicon-git-plain colored"></i> Git</span>
+                                <span class="badge"><i class="devicon-github-original"></i> GitHub Actions</span>
+                                <span class="badge"><i class="devicon-playwright-plain"></i> Playwright</span>
+                                <span class="badge badge--learning"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS <em>En formación</em></span>
+                                <span class="badge badge--learning"><i class="devicon-azure-plain colored"></i> Azure <em>En formación</em></span>
+                                <span class="badge">Google AI Essentials</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section--editorial section--alt">
+            <div class="container editorial">
+                <div class="editorial-label"><span class="scramble-label" data-text="04 — Proyectos">04 — Proyectos</span><div class="label-line"></div></div>
+                <div class="editorial-content">
+                    <h2 class="section-title">Cada proyecto me enseñó algo.</h2>
+                    <div class="projects-grid">
+                        <article class="project-card project-card--featured">
+                            <div class="project-top"><span class="project-num">01</span><div class="project-links"><a href="https://ferre-traker.vercel.app" target="_blank" rel="noopener" class="project-link">Demo ↗</a><a href="https://github.com/kevynceledon-ui/FerreTraker" target="_blank" rel="noopener" class="project-link">Repo ↗</a></div></div>
                             <h3>FerreTraker</h3>
-                            <div class="project-links">
-                                <a href="https://ferre-traker.vercel.app" target="_blank" rel="noopener">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                    <span>Demo</span>
-                                </a>
-                                <a href="https://github.com/kevynceledon-ui/FerreTraker" target="_blank" rel="noopener">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                    <span>Repo</span>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="project-description">Sistema de monitoreo y comparación de precios de materiales de construcción. Web scraping automatizado con Playwright, API REST con Express y visualización en React.
-                            <p class="project-description"> A este proyecto se le estará realizando cambios constantemente.</p>
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">React</span>
-                            <span class="tech-badge">Node.js</span>
-                            <span class="tech-badge">Express</span>
-                            <span class="tech-badge">Sequelize</span>
-                            <span class="tech-badge">PostgreSQL</span>
-                            <span class="tech-badge">Playwright</span>
-                            <span class="tech-badge">GitHub Actions</span>
-                        </div>
-                    </article>
+                            <p class="project-desc">Plataforma Full Stack de gestión y extracción de datos (Sodimac, Easy, Imperial).</p>
+                            <ul class="project-bullets">
+                                <li>Scraping diario Playwright + Node.js, limpieza y normalización multi-fuente</li>
+                                <li>Automatizado vía GitHub Actions 04:00 AM sin intervención</li>
+                                <li>PostgreSQL con Upsert para histórico sin duplicados</li>
+                            </ul>
+                            <div class="project-tech"><span>React</span><span>Node.js</span><span>Express</span><span>Sequelize</span><span>PostgreSQL</span><span>Playwright</span><span>GitHub Actions</span></div>
+                        </article>
+                        <article class="project-card">
+                            <div class="project-top"><span class="project-num">02</span><div class="project-links"><a href="https://github.com/kevynceledon-ui/Proyecto-ABP-8-JWT-API-RESTful" target="_blank" rel="noopener" class="project-link">Repo ↗</a></div></div>
+                            <h3>Esports Teams Management API</h3>
+                            <p class="project-desc">API RESTful CRUD con autenticación y documentación.</p>
+                            <ul class="project-bullets"><li>JWT, validación y Swagger</li><li>Upload Multer + persistencia relacional</li></ul>
+                            <div class="project-tech"><span>Node.js</span><span>Express</span><span>Sequelize</span><span>PostgreSQL</span><span>JWT</span><span>Swagger</span><span>Multer</span></div>
+                        </article>
+                    </div>
+                    <div class="projects-more">
+                        <p>Próximamente — Automatización Python + Cloud. <span class="tag-learning">En formación</span></p>
+                        <a href="https://github.com/kevynceledon-ui" target="_blank" rel="noopener" class="btn btn-pill btn-pill--ghost">Ver más en GitHub →</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2 class="section-title">Contacto</h2>
-                <p class="contact-text">¿Interesado en trabajar conmigo? ¡Escríbeme!</p>
-                <form class="contact-form" id="contactForm">
-                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" required>
+        <section id="experience" class="section section--editorial">
+            <div class="container editorial">
+                <div class="editorial-label"><span class="scramble-label" data-text="05 — Experiencia">05 — Experiencia</span><div class="label-line"></div></div>
+                <div class="editorial-content">
+                    <h2 class="section-title">Experiencia laboral.</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Feb 2026 — Jul 2026</div>
+                            <div class="timeline-card">
+                                <h3>Operador de Sistemas y Control (CCTV)</h3>
+                                <h4>ISAM — Vallenar</h4>
+                                <p>Monitoreo 24/7 de plataformas de vigilancia, informes diarios, bitácoras de incidencias y soporte Tier 1 (red, reinicio sistemas, fallas hw/sw).</p>
+                                <div class="timeline-tech"><span>Soporte TI</span><span>Troubleshooting</span><span>Informes</span></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section section--editorial section--alt">
+            <div class="container editorial">
+                <div class="editorial-label"><span class="scramble-label" data-text="06 — Formación">06 — Formación</span><div class="label-line"></div></div>
+                <div class="editorial-content">
+                    <h2 class="section-title">Formación y certificaciones.</h2>
+                    <div class="timeline">
+                        <div class="timeline-item"><div class="timeline-date">2026 — En curso</div><div class="timeline-card"><h3>Automatización con Python</h3><h4>Coursera — En formación</h4><p>Scripting, automatización y análisis de datos con Python.</p><div class="timeline-tech"><span>Python</span><span>Automatización</span></div></div></div>
+                        <div class="timeline-item"><div class="timeline-date">2026 — En curso</div><div class="timeline-card"><h3>Análisis de Datos</h3><h4>Coursera — En formación</h4><p>Extracción, limpieza, modelado y análisis.</p><div class="timeline-tech"><span>SQL</span><span>Análisis</span></div></div></div>
+                        <div class="timeline-item"><div class="timeline-date">2026</div><div class="timeline-card"><h3>Google AI Essentials</h3><h4>Google — Certificación</h4><p>IA para productividad y análisis. Prompting, ética y flujos asistidos.</p><div class="timeline-tech"><span>IA</span><span>Productividad</span></div></div></div>
+                        <div class="timeline-item"><div class="timeline-date">Dic 2025 — Mar 2026</div><div class="timeline-card"><h3>Bootcamp Full Stack JavaScript</h3><h4>Talento Digital para Chile</h4><p>Intensivo 4 meses: arquitectura backend, bases de datos, APIs y frontend.</p><div class="timeline-tech"><span>Node.js</span><span>React</span><span>SQL</span></div></div></div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section--editorial">
+            <div class="container editorial">
+                <div class="editorial-label"><span class="scramble-label" data-text="07 — Contacto">07 — Contacto</span><div class="label-line"></div></div>
+                <div class="editorial-content">
+                    <h2 class="section-title">¿Trabajamos juntos?</h2>
+                    <p class="section-subtitle">Vallenar, Atacama — remoto/presencial. Respuesta en &lt; 24h vía LinkedIn o formulario.</p>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-link" id="emailCard">
+                                <span class="contact-link-label">Email</span>
+                                <button type="button" class="contact-link-value btn-copy" id="copyEmailBtn2" data-user="kevynceledon" data-domain="gmail.com">Click para copiar email</button>
+                            </div>
+                            <a href="https://www.linkedin.com/in/kevin-celedón/" target="_blank" rel="noopener" class="contact-link"><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">Kevin Celedón ↗</span></a>
+                            <a href="https://github.com/kevynceledon-ui" target="_blank" rel="noopener" class="contact-link"><span class="contact-link-label">GitHub</span><span class="contact-link-value">kevynceledon-ui ↗</span></a>
+                            <p class="contact-note">¿Prefieres directo? LinkedIn DM es el canal más rápido.</p>
+                        </div>
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="form-row">
+                                <div class="form-group"><label for="name">Nombre</label><input type="text" id="name" name="name" required autocomplete="name" placeholder="Tu nombre"></div>
+                                <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email" placeholder="tu@empresa.com"></div>
+                            </div>
+                            <div class="form-group"><label for="topic">Motivo</label><select id="topic" name="topic" required><option value="">Selecciona</option><option value="empleo">Oportunidad laboral</option><option value="freelance">Proyecto</option><option value="colaboracion">Colaboración</option><option value="otro">Otro</option></select></div>
+                            <div class="form-group"><label for="message">Mensaje</label><textarea id="message" name="message" rows="5" required placeholder="Cuéntame sobre el rol..."></textarea></div>
+                            <button type="submit" class="btn btn-pill btn-pill--lime" id="submitBtn">Enviar mensaje →</button>
+                            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                        </form>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submitBtn">Enviar mensaje</button>
-                    <p class="form-status" id="formStatus"></p>
-                </form>
-                <div class="contact-social">
-                    <a href="https://github.com/kevynceledon-ui" target="_blank" rel="noopener" class="btn btn-outline">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/kevin-celedón/" target="_blank" rel="noopener" class="btn btn-outline">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        LinkedIn
-                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Kevin Celedón. Built with passion.</p>
+        <div class="container footer-inner">
+            <p>© 2026 Kevin Ariel Celedón Martínez — Vallenar, Chile.</p>
+            <div class="footer-links">
+                <a href="https://github.com/kevynceledon-ui/mi_Portafolio" target="_blank" rel="noopener">Código fuente ↗</a>
+                <a href="https://www.linkedin.com/in/kevin-celedón/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
         </div>
     </footer>
-
     <script src="src/js/main.js"></script>
 </body>
 </html>
